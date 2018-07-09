@@ -1,0 +1,11 @@
+https://www.psce.com/en/blog/2012/04/04/how-to-selectively-kill-queries-in-mysql/
+
+
+mysql> SELECT CONCAT('KILL ',ID,';')
+FROM   INFORMATION_SCHEMA.PROCESSLIST
+WHERE  USER = 'webs'
+       AND COMMAND = 'Query'
+       AND TIME > 10
+INTO   OUTFILE '/tmp/kill_list.txt';
+
+Query OK, 56 rows affected (0.10 sec)
