@@ -52,7 +52,7 @@ def hipchat_notify(token, room, message, color='yellow', notify=False,
 
 
 try:
-    hipchat_notify('MY_HIPCHAT_TOKEN', 'room_name_or_id', 'Hello World!')
+    hipchat_notify('MY_HIPCHAT_TOKEN', 'room_name_or_id', 'Test send notify to hipchat !!!')
 except Exception as e:
         msg = "[ERROR] HipChat notify failed: '{0}'".format(e)
         print(msg, file=sys.stderr)
