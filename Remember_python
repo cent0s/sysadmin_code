@@ -1,0 +1,4 @@
+List : ['physics', 'chemistry', 1997, 2000];
+Tuple : ('physics', 'chemistry', 1997, 2000);
+Dic : dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+
