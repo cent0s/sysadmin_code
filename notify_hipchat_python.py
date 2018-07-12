@@ -1,9 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 from __future__ import print_function
 import requests
 import sys
 import json
+import os
 
 
 def hipchat_notify(token, room, message, color='yellow', notify=False,
@@ -48,12 +49,18 @@ def hipchat_notify(token, room, message, color='yellow', notify=False,
         'color': color
     }
     r = requests.post(url, data=json.dumps(payload), headers=headers)
-    r.raise_for_status()
 
+#def send_content_hipchat(token, room):
+#       message = str(os.getloadavg())
+#       hipchat_notify(token,room,message,"red")
 
+if __name__ == '__main__':
+        token = 'p45CptgxUGc0qvlxSWCyZPR7C60WhxrPLNYXHDQx'
+        room = '4090741'
+        message = str(os.getloadavg())
 try:
-    hipchat_notify('MY_HIPCHAT_TOKEN', 'room_name_or_id', 'Test send notify to hipchat !!!')
+        hipchat_notify(token,room,message,"red")
 except Exception as e:
         msg = "[ERROR] HipChat notify failed: '{0}'".format(e)
         print(msg, file=sys.stderr)
-sys.exit(1)
+        sys.exit(1)
