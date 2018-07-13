@@ -13,3 +13,11 @@ http://localhost:8080/?code=4/AAAfY8OA-FRArnDFu8AU-6jHY7nc3rHKtQQJ3DYzSUV369V-r3
 After that , you can do everything with Gmail API
 
 https://www.makeuseof.com/tag/read-write-google-sheets-python/
+
+new link can edit sheet google sheet 
+
+
+https://codedprojects.wordpress.com/2017/05/03/how-to-read-and-write-to-google-sheets-with-python/
+Error hapeen when setup 
+https://github.com/burnash/gspread/issues/513
+anh musst enable drive API and Sheet API follow error on exception when run the first script
